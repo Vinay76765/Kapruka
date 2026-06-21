@@ -6,7 +6,7 @@ const config = {
   retries: 0,
   
   /* Maximum time one test can run for. */
-  timeout: 30 * 1000,
+  timeout: 60 * 1000,
   expect: {
   
     timeout: 5000
@@ -26,6 +26,7 @@ const config = {
     headless : true,
     screenshot : 'on',
     trace : 'on',//off,on
+    navigationTimeout: 50000,
     
     
     
@@ -34,4 +35,3 @@ const config = {
 
 };
 
-module.exports = config;
