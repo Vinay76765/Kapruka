@@ -21,6 +21,7 @@ class SignupPage {
     async goTokap()
     {
         await this.page.goto("https://www.kapruka.com/?srsltid=AfmBOorOwDUMEemcwvYsu4uhuIC1C_sPjsHXMWLeCwlf2YTcM6_-Yct2");
+        await this.page.waitForTimeout(50000);
     }   
 
     async validSignup(firstname,lastname,email,password,confirmpassword)

@@ -1,0 +1,821 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: tests\Login.spec.js >> Login with valid credentials
+- Location: tests\Login.spec.js:14:1
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - link "logo area" [ref=e5] [cursor=pointer]:
+      - /url: https://www.kapruka.com
+      - img "logo area" [ref=e6]
+    - generic [ref=e10]:
+      - textbox "SEARCH PRODUCTS.." [ref=e11]
+      - button "online search" [ref=e12] [cursor=pointer]:
+        - img "Search" [ref=e13]
+    - generic [ref=e14]:
+      - combobox "Select Currency" [ref=e15]:
+        - option "INR" [selected]
+        - option "USD"
+      - combobox "Select language" [ref=e16]:
+        - option "Lang"
+        - option "සිං"
+        - option "Eng" [selected]
+      - link [ref=e19] [cursor=pointer]:
+        - /url: /shops/checkout/deliveryCartViewPage.jsp
+        - img [ref=e22]
+      - link "Check Order Status" [ref=e27] [cursor=pointer]:
+        - /url: https://www.kapruka.com/contactUs/orderStatus.jsp
+        - img "status" [ref=e28]
+      - link "Login to Your Account" [ref=e30] [cursor=pointer]:
+        - /url: https://www.kapruka.com/shops/customerAccounts/accountLogin.jsp
+        - img [ref=e31]
+  - list [ref=e35]:
+    - listitem [ref=e36]:
+      - generic [ref=e38] [cursor=pointer]: All Categories
+    - listitem [ref=e39]:
+      - link "Same Day Rush delivery" [ref=e40] [cursor=pointer]:
+        - /url: https://www.kapruka.com/online/samedaydelivery
+        - img "Same Day" [ref=e42]
+        - generic [ref=e43]: Rush delivery
+    - listitem [ref=e44]:
+      - link "On Sale" [ref=e45] [cursor=pointer]:
+        - /url: https://www.kapruka.com/online/promotions
+        - generic [ref=e47]: On Sale
+    - listitem [ref=e48]:
+      - link "Events" [ref=e49] [cursor=pointer]:
+        - /url: https://www.kapruka.com/shops/events_home.jsp
+        - generic [ref=e51]: Events
+    - listitem [ref=e52]:
+      - link "Brands" [ref=e53] [cursor=pointer]:
+        - /url: https://www.kapruka.com/online_brands.jsp
+        - generic [ref=e55]: Brands
+    - listitem [ref=e56]:
+      - link "For You" [ref=e57] [cursor=pointer]:
+        - /url: https://www.kapruka.com/online/combogifts
+        - generic [ref=e59]: For You
+  - link "Sri Lanka's Largest Online Shop" [ref=e62] [cursor=pointer]:
+    - /url: https://www.kapruka.com/online/childrensday
+    - img "Sri Lanka's Largest Online Shop" [ref=e63]
+  - generic [ref=e65]:
+    - link "Cakes Image Cakes" [ref=e66] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/cakes
+      - img "Cakes Image" [ref=e68]
+      - generic [ref=e69]: Cakes
+    - link "Flowers Image Flowers" [ref=e70] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/flowers
+      - img "Flowers Image" [ref=e72]
+      - generic [ref=e73]: Flowers
+    - link "Chocolates Image Chocolates" [ref=e74] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/chocolates
+      - img "Chocolates Image" [ref=e76]
+      - generic [ref=e77]: Chocolates
+    - link "Clothing Image Clothing" [ref=e78] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/clothing
+      - img "Clothing Image" [ref=e80]
+      - generic [ref=e81]: Clothing
+    - link "Electronics Image Electronics" [ref=e82] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/electronics
+      - img "Electronics Image" [ref=e84]
+      - generic [ref=e85]: Electronics
+    - link "fashion Image Fashion" [ref=e86] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/fashion
+      - img "fashion Image" [ref=e88]
+      - generic [ref=e89]: Fashion
+    - link "Food & Restaurants Image Food & Restaurants" [ref=e90] [cursor=pointer]:
+      - /url: https://www.kapruka.com/shops/specialGifts/food_home_page.jsp
+      - img "Food & Restaurants Image" [ref=e92]
+      - generic [ref=e93]: Food & Restaurants
+    - link "Fruit Baskets Image Fruits" [ref=e94] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/fruitbaskets
+      - img "Fruit Baskets Image" [ref=e96]
+      - generic [ref=e97]: Fruits
+    - link "Soft Toys Image Soft Toys & Kids Toys" [ref=e98] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/softtoy
+      - img "Soft Toys Image" [ref=e100]
+      - generic [ref=e101]: Soft Toys & Kids Toys
+    - link "Grocery Items Image Grocery & Hampers" [ref=e102] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/grocery
+      - img "Grocery Items Image" [ref=e104]
+      - generic [ref=e105]: Grocery & Hampers
+    - link "Greeting Cards Image Greeting Cards & Party Supplies" [ref=e106] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/greetingcards
+      - img "Greeting Cards Image" [ref=e108]
+      - generic [ref=e109]: Greeting Cards & Party Supplies
+    - link "Sports and Bicycles Image Sports and Bicycles" [ref=e110] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/sports
+      - img "Sports and Bicycles Image" [ref=e112]
+      - generic [ref=e113]: Sports and Bicycles
+    - link "Mother and Baby Image Mother and Baby" [ref=e114] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/baby
+      - img "Mother and Baby Image" [ref=e116]
+      - generic [ref=e117]: Mother and Baby
+    - link "Jewellery and Watches Image Jewellery and Watches" [ref=e118] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/jewellery
+      - img "Jewellery and Watches Image" [ref=e120]
+      - generic [ref=e121]: Jewellery and Watches
+    - link "Cosmetics Image Cosmetics & Perfumes" [ref=e122] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/cosmetics
+      - img "Cosmetics Image" [ref=e124]
+      - generic [ref=e125]: Cosmetics & Perfumes
+    - link "Customgifts Image Customized Gifts" [ref=e126] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/customizedGifts
+      - img "Customgifts Image" [ref=e128]
+      - generic [ref=e129]: Customized Gifts
+    - link "Health and wellness Image Health and Wellness" [ref=e130] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/pharmacy
+      - img "Health and wellness Image" [ref=e132]
+      - generic [ref=e133]: Health and Wellness
+    - link "Home & Lifestyle Image Home & Lifestyle" [ref=e134] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/home_lifestyle
+      - img "Home & Lifestyle Image" [ref=e136]
+      - generic [ref=e137]: Home & Lifestyle
+    - link "Combo and Gift Sets Image Combo and Gift Sets" [ref=e138] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/giftset
+      - img "Combo and Gift Sets Image" [ref=e140]
+      - generic [ref=e141]: Combo and Gift Sets
+    - link "Books Books & Stationery" [ref=e142] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/books
+      - img "Books" [ref=e144]
+      - generic [ref=e145]: Books & Stationery
+  - generic [ref=e147]:
+    - generic [ref=e148]:
+      - heading "Featured Products" [level=2] [ref=e149]
+      - link "Browse All Products" [ref=e150] [cursor=pointer]:
+        - /url: https://www.kapruka.com/shops/deliveryCatalogCompact_wide.jsp
+        - text: Browse All Products
+        - img [ref=e151]
+    - generic [ref=e155]:
+      - link "LASSANA WASILISSA Buy M D GUNASENA AND COMPANY (PVT) LTD Online for specialGifts LASSANA WASILISSA US$5.00 (₹473)" [ref=e157] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/lassana-wasilissa/kid/book002357
+        - img "LASSANA WASILISSA Buy M D GUNASENA AND COMPANY (PVT) LTD Online for specialGifts" [ref=e158]
+        - generic [ref=e159]:
+          - generic [ref=e160]: LASSANA WASILISSA
+          - generic [ref=e162]: US$5.00 (₹473)
+      - link "Rosy Harmony Bloom Arrangement Online for flowers Rosy Harmony Bloom Arrangement US$15.95 (₹1,510)" [ref=e164] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/rosy-harmony-bloom-arrangement/kid/flowers00t2128
+        - img "Rosy Harmony Bloom Arrangement Online for flowers" [ref=e165]
+        - generic [ref=e166]:
+          - generic [ref=e167]: Rosy Harmony Bloom Arrangement
+          - generic [ref=e169]: US$15.95 (₹1,510)
+      - 'link "Rustic Tree-Shaped Desk Organizer With Photo Frame 4``x6`` Buy NA Online for specialGifts Rustic Tree-shaped Desk Organizer With Photo Frame 4``x6`` US$11.85 (₹1,122)" [ref=e171] [cursor=pointer]':
+        - /url: https://www.kapruka.com/buyonline/rustic-tree-shaped-desk-organi/kid/customgift0083
+        - 'img "Rustic Tree-Shaped Desk Organizer With Photo Frame 4``x6`` Buy NA Online for specialGifts" [ref=e172]'
+        - generic [ref=e173]:
+          - generic [ref=e174]: "Rustic Tree-shaped Desk Organizer With Photo Frame 4``x6``"
+          - generic [ref=e176]: US$11.85 (₹1,122)
+      - 'link "Best Seller Luxurious `All My Love` Combo with Ribbon Cake and 40 Red Roses Bouquet Buy NA Online for specialGifts 15% off Luxurious `all My Love` Combo With Ribbon Cake And 40 Red Roses Bouquet US$142.73 (₹13,516) US$121.32 (₹11,489)" [ref=e178] [cursor=pointer]':
+        - /url: https://www.kapruka.com/buyonline/luxurious-all-my-love-combo-wi/kid/combockfl54
+        - generic [ref=e179]: Best Seller
+        - 'img "Luxurious `All My Love` Combo with Ribbon Cake and 40 Red Roses Bouquet Buy NA Online for specialGifts" [ref=e180]'
+        - generic [ref=e181]: 15% off
+        - generic [ref=e182]:
+          - generic [ref=e183]: "Luxurious `all My Love` Combo With Ribbon Cake And 40 Red Roses Bouquet"
+          - generic [ref=e186]: US$142.73 (₹13,516) US$121.32 (₹11,489)
+      - link "Blooming Wishes Happy Birthday Ribbon Loaf Cake Online for cakes Blooming Wishes Happy Birthday Ribbon Loaf Cake US$14.99 (₹1,419)" [ref=e188] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/blooming-wishes-happy-birthday/kid/cake00ka002167
+        - img "Blooming Wishes Happy Birthday Ribbon Loaf Cake Online for cakes" [ref=e189]
+        - generic [ref=e190]:
+          - generic [ref=e191]: Blooming Wishes Happy Birthday Ribbon Loaf Cake
+          - generic [ref=e193]: US$14.99 (₹1,419)
+      - link "Blossom Chocolate Box 10 Pieses Buy NA Online for specialGifts Blossom Chocolate Box 10 Pieses US$16.67 (₹1,578)" [ref=e195] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/blossom-chocolate-box-10-pieses/kid/chocolates00ka00220
+        - img "Blossom Chocolate Box 10 Pieses Buy NA Online for specialGifts" [ref=e196]
+        - generic [ref=e197]:
+          - generic [ref=e198]: Blossom Chocolate Box 10 Pieses
+          - generic [ref=e200]: US$16.67 (₹1,578)
+      - link "Best Seller Cuddly Charm Brown Teddy In Pretty Frock - 8 Inch Buy NA Online for specialGifts 20% off Cuddly Charm Brown Teddy In Pretty Frock - 8 Inch US$10.69 (₹1,012) US$8.55 (₹809)" [ref=e202] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/cuddly-charm-brown-teddy-in-pr/kid/softtoy001200
+        - generic [ref=e203]: Best Seller
+        - img "Cuddly Charm Brown Teddy In Pretty Frock - 8 Inch Buy NA Online for specialGifts" [ref=e204]
+        - generic [ref=e205]: 20% off
+        - generic [ref=e206]:
+          - generic [ref=e207]: Cuddly Charm Brown Teddy In Pretty Frock - 8 Inch
+          - generic [ref=e210]: US$10.69 (₹1,012) US$8.55 (₹809)
+      - link "Multi Layer Rotating Kitchen Storage Rack Buy Social Mart Online for partnercentral Multi Layer Rotating Kitchen Storage Rack US$38.89 (₹3,682)" [ref=e212] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/multi-layer-rotating-kitchen-s/kid/ef_pc_home0v18pod00315p
+        - img "Multi Layer Rotating Kitchen Storage Rack Buy Social Mart Online for partnercentral" [ref=e213]
+        - generic [ref=e214]:
+          - generic [ref=e215]: Multi Layer Rotating Kitchen Storage Rack
+          - generic [ref=e217]: US$38.89 (₹3,682)
+      - link "Ccuk Classic Beauty Gift Collection Buy British Cosmetics Online for specialGifts Ccuk Classic Beauty Gift Collection US$34.74 (₹3,289)" [ref=e219] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/ccuk-classic-beauty-gift-colle/kid/cosmetics001743
+        - img "Ccuk Classic Beauty Gift Collection Buy British Cosmetics Online for specialGifts" [ref=e220]
+        - generic [ref=e221]:
+          - generic [ref=e222]: Ccuk Classic Beauty Gift Collection
+          - generic [ref=e224]: US$34.74 (₹3,289)
+      - link "Mutton Biriyani Family Sawan Buy NA Online for specialGifts Mutton Biriyani Family Sawan US$96.81 (₹9,167)" [ref=e226] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/mutton-biriyani-family-sawan/kid/kingsburyf00107
+        - img "Mutton Biriyani Family Sawan Buy NA Online for specialGifts" [ref=e227]
+        - generic [ref=e228]:
+          - generic [ref=e229]: Mutton Biriyani Family Sawan
+          - generic [ref=e231]: US$96.81 (₹9,167)
+      - link "Winsor 1227 Black Ladies Watch With Rose Gold Hands Buy WINSOR Online for partnercentral Winsor 1227 Black Ladies Watch With Rose Gold Hands US$41.81 (₹3,959)" [ref=e233] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/winsor-1227-black-ladies-watch/kid/ef_pc_jewe0v2216p00114
+        - img "Winsor 1227 Black Ladies Watch With Rose Gold Hands Buy WINSOR Online for partnercentral" [ref=e234]
+        - generic [ref=e235]:
+          - generic [ref=e236]: Winsor 1227 Black Ladies Watch With Rose Gold Hands
+          - generic [ref=e238]: US$41.81 (₹3,959)
+      - link "Candy coords Burgundy Buy JoeY Clothing Online for partnercentral 65.98% off Candy Coords Burgundy US$21.67 (₹2,052) US$7.37 (₹697)" [ref=e240] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/candy-coords-burgundy/kid/ef_pc_clot0v160pod00551fdp
+        - img "Candy coords Burgundy Buy JoeY Clothing Online for partnercentral" [ref=e241]
+        - generic [ref=e242]: 65.98% off
+        - generic [ref=e243]:
+          - generic [ref=e244]: Candy Coords Burgundy
+          - generic [ref=e247]: US$21.67 (₹2,052) US$7.37 (₹697)
+      - link "Cetaphil Optimal Hydration Replenishing Lotion Buy Cetaphil Online for specialGifts Cetaphil Optimal Hydration Replenishing Lotion US$26.93 (₹2,550)" [ref=e249] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/cetaphil-optimal-hydration-rep/kid/pharmacy00825
+        - img "Cetaphil Optimal Hydration Replenishing Lotion Buy Cetaphil Online for specialGifts" [ref=e250]
+        - generic [ref=e251]:
+          - generic [ref=e252]: Cetaphil Optimal Hydration Replenishing Lotion
+          - generic [ref=e254]: US$26.93 (₹2,550)
+      - link "Sanford 5 in 1 Hair Care Combo - SF9679PCC Buy Sanford Online for specialGifts Sanford 5 In 1 Hair Care Combo - SF9679PCC US$66.63 (₹6,309)" [ref=e256] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/sanford-5-in-1-hair-care-combo/kid/elec00a5914
+        - img "Sanford 5 in 1 Hair Care Combo - SF9679PCC Buy Sanford Online for specialGifts" [ref=e257]
+        - generic [ref=e258]:
+          - generic [ref=e259]: Sanford 5 In 1 Hair Care Combo - SF9679PCC
+          - generic [ref=e261]: US$66.63 (₹6,309)
+  - generic [ref=e262]:
+    - generic [ref=e263]:
+      - heading "New Gift Additions" [level=2] [ref=e264]
+      - link "Browse All Products" [ref=e265] [cursor=pointer]:
+        - /url: https://www.kapruka.com/online/newadditions
+        - text: Browse All Products
+        - img [ref=e266]
+    - generic [ref=e270]:
+      - link "SPA Ceylon Wellness Set For Men Buy SPA Ceylon Online for specialGifts SPA Ceylon Wellness Set For Men US$44.07 (₹4,173)" [ref=e272] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/spa-ceylon-wellness-set-for-men/kid/cosmetics001695
+        - img "SPA Ceylon Wellness Set For Men Buy SPA Ceylon Online for specialGifts" [ref=e273]
+        - generic [ref=e274]:
+          - generic [ref=e275]: SPA Ceylon Wellness Set For Men
+          - generic [ref=e277]: US$44.07 (₹4,173)
+      - link "GIORDANO ANALOG WATCH FOR MEN GD 1193 99 Buy NA Online for specialGifts GIORDANO ANALOG WATCH FOR MEN GD 1193 99 US$91.38 (₹8,653)" [ref=e279] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/giordano-analog-watch-for-men-/kid/jewelleryw001378
+        - img "GIORDANO ANALOG WATCH FOR MEN GD 1193 99 Buy NA Online for specialGifts" [ref=e280]
+        - generic [ref=e281]:
+          - generic [ref=e282]: GIORDANO ANALOG WATCH FOR MEN GD 1193 99
+          - generic [ref=e284]: US$91.38 (₹8,653)
+      - link "Toyota Premium Car Headrest Pillow And Seat Belt Cushion Set Buy Social Mart Online for partnercentral Toyota Premium Car Headrest Pillow And Seat Belt Cushion Set US$7.96 (₹753)" [ref=e286] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/toyota-premium-car-headrest-pi/kid/ef_pc_auto0v18pod00041p
+        - img "Toyota Premium Car Headrest Pillow And Seat Belt Cushion Set Buy Social Mart Online for partnercentral" [ref=e287]
+        - generic [ref=e288]:
+          - generic [ref=e289]: Toyota Premium Car Headrest Pillow And Seat Belt Cushion Set
+          - generic [ref=e291]: US$7.96 (₹753)
+      - link "2 Tier Over The Sink Dish Drying Rack Buy Social Mart Online for partnercentral 2 Tier Over The Sink Dish Drying Rack US$22.97 (₹2,175)" [ref=e293] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/2-tier-over-the-sink-dish-dryi/kid/ef_pc_home0v18pod00260p
+        - img "2 Tier Over The Sink Dish Drying Rack Buy Social Mart Online for partnercentral" [ref=e294]
+        - generic [ref=e295]:
+          - generic [ref=e296]: 2 Tier Over The Sink Dish Drying Rack
+          - generic [ref=e298]: US$22.97 (₹2,175)
+      - link "Ritzbury Roccoa Dubai Style Chocolate Kunafa Pistachio 100g Buy NA Online for specialGifts Ritzbury Roccoa Dubai Style Chocolate Kunafa Pistachio 100g US$4.08 (₹386)" [ref=e300] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/ritzbury-roccoa-dubai-style-ch/kid/chocolates002003
+        - img "Ritzbury Roccoa Dubai Style Chocolate Kunafa Pistachio 100g Buy NA Online for specialGifts" [ref=e301]
+        - generic [ref=e302]:
+          - generic [ref=e303]: Ritzbury Roccoa Dubai Style Chocolate Kunafa Pistachio 100g
+          - generic [ref=e305]: US$4.08 (₹386)
+      - link "Elegant Dual Strap Ladies Shoulder Bag Buy Social Mart Online for partnercentral Elegant Dual Strap Ladies Shoulder Bag US$22.78 (₹2,157)" [ref=e307] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/elegant-dual-strap-ladies-shou/kid/ef_pc_fashion0v18pod00135p
+        - img "Elegant Dual Strap Ladies Shoulder Bag Buy Social Mart Online for partnercentral" [ref=e308]
+        - generic [ref=e309]:
+          - generic [ref=e310]: Elegant Dual Strap Ladies Shoulder Bag
+          - generic [ref=e312]: US$22.78 (₹2,157)
+      - link "Best Seller 5-in-1 Wireless Charging Color Speaker for Mobile Phones, Smartwatches, and Wireless Earbuds Buy NA Online for specialGifts 5-in-1 Wireless Charging Color Speaker For Mobile Phones, Smartwatches, And Wireless Earbuds US$22.15 (₹2,097)" [ref=e314] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/5-in-1-wireless-charging-color/kid/elec00a6032
+        - generic [ref=e315]: Best Seller
+        - img "5-in-1 Wireless Charging Color Speaker for Mobile Phones, Smartwatches, and Wireless Earbuds Buy NA Online for specialGifts" [ref=e316]
+        - generic [ref=e317]:
+          - generic [ref=e318]: 5-in-1 Wireless Charging Color Speaker For Mobile Phones, Smartwatches, And Wireless Earbuds
+          - generic [ref=e320]: US$22.15 (₹2,097)
+      - link "Dkny Be Tempted Donna Karan Perfume For Women 30ml Buy Timeless Scents Online for partnercentral Dkny Be Tempted Donna Karan Perfume For Women 30ml US$96.29 (₹9,118)" [ref=e322] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/dkny-be-tempted-donna-karan-pe/kid/ef_pc_perf0v879p00188
+        - img "Dkny Be Tempted Donna Karan Perfume For Women 30ml Buy Timeless Scents Online for partnercentral" [ref=e323]
+        - generic [ref=e324]:
+          - generic [ref=e325]: Dkny Be Tempted Donna Karan Perfume For Women 30ml
+          - generic [ref=e327]: US$96.29 (₹9,118)
+      - link "Portable Insulated Lunch Bag Buy Social Mart Online for partnercentral Portable Insulated Lunch Bag US$2.96 (₹280)" [ref=e329] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/portable-insulated-lunch-bag/kid/ef_pc_fashion0v18pod00109p
+        - img "Portable Insulated Lunch Bag Buy Social Mart Online for partnercentral" [ref=e330]
+        - generic [ref=e331]:
+          - generic [ref=e332]: Portable Insulated Lunch Bag
+          - generic [ref=e334]: US$2.96 (₹280)
+      - 'link "Sanford 55` 4K UHD Smart LED TV - SF9510LED (Two Year Warranty)+ Free Sanford 2200W Vacuum Cleaner SF881 Buy Sanford Online for specialGifts Sanford 55` 4K UHD Smart LED TV - SF9510LED (two Year Warranty)+ Free Sanford 2200W Vacuum Cleaner SF881 US$629.59 (₹59,622)" [ref=e336] [cursor=pointer]':
+        - /url: https://www.kapruka.com/buyonline/sanford-55-4k-uhd-smart-led-tv/kid/elec00a6080
+        - 'img "Sanford 55` 4K UHD Smart LED TV - SF9510LED (Two Year Warranty)+ Free Sanford 2200W Vacuum Cleaner SF881 Buy Sanford Online for specialGifts" [ref=e337]'
+        - generic [ref=e338]:
+          - generic [ref=e339]: "Sanford 55` 4K UHD Smart LED TV - SF9510LED (two Year Warranty)+ Free Sanford 2200W Vacuum Cleaner SF881"
+          - generic [ref=e341]: US$629.59 (₹59,622)
+      - link "Kky Batik Handmade Elegant Cotton Saree Buy ia-batik Online for partnercentral Kky Batik Handmade Elegant Cotton Saree US$20.74 (₹1,964)" [ref=e343] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/kky-batik-handmade-elegant-cot/kid/ef_pc_clot0v4625p00064
+        - img "Kky Batik Handmade Elegant Cotton Saree Buy ia-batik Online for partnercentral" [ref=e344]
+        - generic [ref=e345]:
+          - generic [ref=e346]: Kky Batik Handmade Elegant Cotton Saree
+          - generic [ref=e348]: US$20.74 (₹1,964)
+      - link "Galadari Nasi Goreng Sawan - 4 Pax Buy Galadari Online for specialGifts Galadari Nasi Goreng Sawan - 4 Pax US$51.85 (₹4,910)" [ref=e350] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/galadari-nasi-goreng-sawan-4-p/kid/galadarif00120
+        - img "Galadari Nasi Goreng Sawan - 4 Pax Buy Galadari Online for specialGifts" [ref=e351]
+        - generic [ref=e352]:
+          - generic [ref=e353]: Galadari Nasi Goreng Sawan - 4 Pax
+          - generic [ref=e355]: US$51.85 (₹4,910)
+      - link "Best Seller Garfield Plush Soft Toy - 16 Inches Buy NA Online for specialGifts 10% off Garfield Plush Soft Toy - 16 Inches US$9.26 (₹876) US$8.33 (₹788)" [ref=e357] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/garfield-plush-soft-toy-16-inc/kid/softtoy001201
+        - generic [ref=e358]: Best Seller
+        - img "Garfield Plush Soft Toy - 16 Inches Buy NA Online for specialGifts" [ref=e359]
+        - generic [ref=e360]: 10% off
+        - generic [ref=e361]:
+          - generic [ref=e362]: Garfield Plush Soft Toy - 16 Inches
+          - generic [ref=e365]: US$9.26 (₹876) US$8.33 (₹788)
+      - link "Best Seller Queen Of My World Gift Set Buy NA Online for specialGifts 10% off Queen Of My World Gift Set US$45.80 (₹4,337) US$41.22 (₹3,903)" [ref=e367] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/queen-of-my-world-gift-set/kid/combockfl22
+        - generic [ref=e368]: Best Seller
+        - img "Queen Of My World Gift Set Buy NA Online for specialGifts" [ref=e369]
+        - generic [ref=e370]: 10% off
+        - generic [ref=e371]:
+          - generic [ref=e372]: Queen Of My World Gift Set
+          - generic [ref=e375]: US$45.80 (₹4,337) US$41.22 (₹3,903)
+  - generic [ref=e376]:
+    - generic [ref=e377]:
+      - heading "Gifts to Sri Lanka - Best Sellers" [level=2] [ref=e378]
+      - link "Browse All Products" [ref=e379] [cursor=pointer]:
+        - /url: https://www.kapruka.com/online/bestsellers
+        - text: Browse All Products
+        - img [ref=e380]
+    - generic [ref=e384]:
+      - link "Giant Teddy Bear Holding Heart - 25 Inches Buy NA Online for specialGifts Giant Teddy Bear Holding Heart - 25 Inches US$21.48 (₹2,034)" [ref=e386] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/giant-teddy-bear-holding-heart/kid/softtoy001195
+        - img "Giant Teddy Bear Holding Heart - 25 Inches Buy NA Online for specialGifts" [ref=e387]
+        - generic [ref=e388]:
+          - generic [ref=e389]: Giant Teddy Bear Holding Heart - 25 Inches
+          - generic [ref=e391]: US$21.48 (₹2,034)
+      - link "Mini Sewing Machine Sm 202a Buy Social Mart Online for partnercentral Mini Sewing Machine Sm 202a US$8.81 (₹834)" [ref=e393] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/mini-sewing-machine-sm-202a/kid/ef_pc_elec0v18pod00417p
+        - img "Mini Sewing Machine Sm 202a Buy Social Mart Online for partnercentral" [ref=e394]
+        - generic [ref=e395]:
+          - generic [ref=e396]: Mini Sewing Machine Sm 202a
+          - generic [ref=e398]: US$8.81 (₹834)
+      - link "Spa Ceylon SeaVeda - Uplifting Discovery Set Buy SPA Ceylon Online for specialGifts Spa Ceylon Seaveda - Uplifting Discovery Set US$22.97 (₹2,175)" [ref=e400] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/spa-ceylon-seaveda-uplifting-d/kid/cosmetics001729
+        - img "Spa Ceylon SeaVeda - Uplifting Discovery Set Buy SPA Ceylon Online for specialGifts" [ref=e401]
+        - generic [ref=e402]:
+          - generic [ref=e403]: Spa Ceylon Seaveda - Uplifting Discovery Set
+          - generic [ref=e405]: US$22.97 (₹2,175)
+      - link "Classic Elegance Ladies Tote Bag Buy Social Mart Online for partnercentral Classic Elegance Ladies Tote Bag US$19.63 (₹1,858) Sold Out" [ref=e407] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/classic-elegance-ladies-tote-b/kid/ef_pc_fashion0v18pod00127p
+        - img "Classic Elegance Ladies Tote Bag Buy Social Mart Online for partnercentral" [ref=e408]
+        - generic [ref=e409]:
+          - generic [ref=e410]: Classic Elegance Ladies Tote Bag
+          - generic [ref=e411]:
+            - generic [ref=e412]: US$19.63 (₹1,858)
+            - generic [ref=e413]: Sold Out
+      - link "Turbo Train And Stunt Adventure Pack Buy NA Online for specialGifts Turbo Train And Stunt Adventure Pack US$42.59 (₹4,033)" [ref=e415] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/turbo-train-and-stunt-adventur/kid/kidstoy0z1673
+        - img "Turbo Train And Stunt Adventure Pack Buy NA Online for specialGifts" [ref=e416]
+        - generic [ref=e417]:
+          - generic [ref=e418]: Turbo Train And Stunt Adventure Pack
+          - generic [ref=e420]: US$42.59 (₹4,033)
+      - link "Stylish Thermo Travel Cup 750ml Buy Social Mart Online for partnercentral Stylish Thermo Travel Cup 750ml US$10.93 (₹1,035)" [ref=e422] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/stylish-thermo-travel-cup-750ml/kid/ef_pc_spor0v18pod00070p
+        - img "Stylish Thermo Travel Cup 750ml Buy Social Mart Online for partnercentral" [ref=e423]
+        - generic [ref=e424]:
+          - generic [ref=e425]: Stylish Thermo Travel Cup 750ml
+          - generic [ref=e427]: US$10.93 (₹1,035)
+      - link "Pg Martin Antler Office Bag Buy PGM Online for partnercentral Pg Martin Antler Office Bag US$70.35 (₹6,662)" [ref=e429] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/pg-martin-antler-office-bag/kid/ef_pc_fashion0v207pod00186p
+        - img "Pg Martin Antler Office Bag Buy PGM Online for partnercentral" [ref=e430]
+        - generic [ref=e431]:
+          - generic [ref=e432]: Pg Martin Antler Office Bag
+          - generic [ref=e434]: US$70.35 (₹6,662)
+      - link "Neutral Beige Small Classic Metallic Edge City Handbag Buy Social Mart Online for partnercentral Neutral Beige Small Classic Metallic Edge City Handbag US$42.59 (₹4,033)" [ref=e436] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/neutral-beige-small-classic-me/kid/ef_pc_fashion0v18pod00114p
+        - img "Neutral Beige Small Classic Metallic Edge City Handbag Buy Social Mart Online for partnercentral" [ref=e437]
+        - generic [ref=e438]:
+          - generic [ref=e439]: Neutral Beige Small Classic Metallic Edge City Handbag
+          - generic [ref=e441]: US$42.59 (₹4,033)
+      - link "3 Door 6 Layer Diy Shoe Rack Buy Social Mart Online for partnercentral 3 Door 6 Layer Diy Shoe Rack US$22.59 (₹2,139)" [ref=e443] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/3-door-6-layer-diy-shoe-rack/kid/ef_pc_home0v18pod00496p
+        - img "3 Door 6 Layer Diy Shoe Rack Buy Social Mart Online for partnercentral" [ref=e444]
+        - generic [ref=e445]:
+          - generic [ref=e446]: 3 Door 6 Layer Diy Shoe Rack
+          - generic [ref=e448]: US$22.59 (₹2,139)
+      - link "Kandy Myst By Cinnamon Rose Blanc Online for cakes Kandy Myst By Cinnamon Rose Blanc US$35.93 (₹3,402)" [ref=e450] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/kandy-myst-by-cinnamon-rose-bl/kid/cakekmc0094
+        - img "Kandy Myst By Cinnamon Rose Blanc Online for cakes" [ref=e451]
+        - generic [ref=e452]:
+          - generic [ref=e453]: Kandy Myst By Cinnamon Rose Blanc
+          - generic [ref=e455]: US$35.93 (₹3,402)
+      - link "2 Tier Over The Sink Dish Drying Rack Buy Social Mart Online for partnercentral 2 Tier Over The Sink Dish Drying Rack US$22.97 (₹2,175)" [ref=e457] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/2-tier-over-the-sink-dish-dryi/kid/ef_pc_home0v18pod00260p
+        - img "2 Tier Over The Sink Dish Drying Rack Buy Social Mart Online for partnercentral" [ref=e458]
+        - generic [ref=e459]:
+          - generic [ref=e460]: 2 Tier Over The Sink Dish Drying Rack
+          - generic [ref=e462]: US$22.97 (₹2,175)
+      - link "The One And Only Gift Set For Him Buy Social Mart Online for partnercentral The One And Only Gift Set For Him US$41.85 (₹3,963) Sold Out" [ref=e464] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/the-one-and-only-gift-set-for-/kid/ef_pc_gift0v18pod00003p
+        - img "The One And Only Gift Set For Him Buy Social Mart Online for partnercentral" [ref=e465]
+        - generic [ref=e466]:
+          - generic [ref=e467]: The One And Only Gift Set For Him
+          - generic [ref=e468]:
+            - generic [ref=e469]: US$41.85 (₹3,963)
+            - generic [ref=e470]: Sold Out
+      - link "Greenlife Rice Cooker Buy Social Mart Online for partnercentral Greenlife Rice Cooker US$34.07 (₹3,226)" [ref=e472] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/greenlife-rice-cooker/kid/ef_pc_elec0v18pod00363p
+        - img "Greenlife Rice Cooker Buy Social Mart Online for partnercentral" [ref=e473]
+        - generic [ref=e474]:
+          - generic [ref=e475]: Greenlife Rice Cooker
+          - generic [ref=e477]: US$34.07 (₹3,226)
+      - link "Ladies Handbag- Black Buy NA Online for specialGifts Ladies Handbag- Black US$16.07 (₹1,521)" [ref=e479] [cursor=pointer]:
+        - /url: https://www.kapruka.com/buyonline/ladies-handbag-black/kid/fashion001518
+        - img "Ladies Handbag- Black Buy NA Online for specialGifts" [ref=e480]
+        - generic [ref=e481]:
+          - generic [ref=e482]: Ladies Handbag- Black
+          - generic [ref=e484]: US$16.07 (₹1,521)
+  - generic [ref=e485]:
+    - heading "Sri Lanka's Widest Range of Online Delivery, From Everyday Essentials to Special Gifts" [level=1] [ref=e486]
+    - paragraph [ref=e487]:
+      - text: Kapruka is Sri Lanka's largest and most trusted online shopping and delivery destination, publicly listed on the Colombo Stock Exchange and serving customers since 2002. Thousands of partner sellers across the country sell on Kapruka, making it easy to buy and send gifts to Sri Lanka or shop online for fresh groceries, flowers, cakes, chocolates, electronics, and curated gift hampers with same day delivery options. Over 1.2 million Sri Lankan expatriates around the world already use Kapruka to send gifts and essentials home to their loved ones. With secure payments, real-time order tracking, and reliable island-wide delivery, Kapruka is the trusted choice for online shopping in Sri Lanka.
+      - link "Read more about us" [ref=e488] [cursor=pointer]:
+        - /url: https://www.kapruka.com/contactUs/about.html
+  - heading "Popular Categories" [level=2] [ref=e490]
+  - generic [ref=e492]:
+    - link "Say it with Flowers ! Flower Shop Flowers" [ref=e493] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/flowers
+      - generic [ref=e494]:
+        - generic [ref=e495]: Say it with Flowers !
+        - heading "Flower Shop" [level=3] [ref=e496]
+      - img "Flowers"
+    - link "Pure Bliss in Every Bite ! Chocolates Chocolates" [ref=e497] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/chocolates
+      - generic [ref=e498]:
+        - generic [ref=e499]: Pure Bliss in Every Bite !
+        - heading "Chocolates" [level=3] [ref=e500]
+      - img "Chocolates"
+    - link "Beauty Begins Here ! Cosmetics Cosmetics" [ref=e501] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/cosmetics
+      - generic [ref=e502]:
+        - generic [ref=e503]: Beauty Begins Here !
+        - heading "Cosmetics" [level=3] [ref=e504]
+      - img "Cosmetics"
+    - link "Good Food, Great Mood ! Food / Restaurant Food" [ref=e505] [cursor=pointer]:
+      - /url: https://www.kapruka.com/shops/specialGifts/food_home_page.jsp
+      - generic [ref=e506]:
+        - generic [ref=e507]: Good Food, Great Mood !
+        - heading "Food / Restaurant" [level=3] [ref=e508]
+      - img "Food"
+    - link "Sparkle with Every Step ! Jewellery Jewelry" [ref=e509] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/jewellery
+      - generic [ref=e510]:
+        - generic [ref=e511]: Sparkle with Every Step !
+        - heading "Jewellery" [level=3] [ref=e512]
+      - img "Jewelry"
+    - link "For the Love of Cake ! Cakes Cakes" [ref=e513] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/cakes
+      - generic [ref=e514]:
+        - generic [ref=e515]: For the Love of Cake !
+        - heading "Cakes" [level=3] [ref=e516]
+      - img "Cakes"
+  - heading "Your Suggestions" [level=2] [ref=e518]
+  - generic [ref=e520]:
+    - generic [ref=e521]:
+      - img "Kapruka Online Shopping in Sri Lanka"
+    - generic [ref=e523]:
+      - generic [ref=e525]:
+        - link "Queen Of My World Gift Set at Kapruka Online Queen Of My World Gift Set US$ 45.80 (₹ 4337)" [ref=e527] [cursor=pointer]:
+          - /url: https://www.kapruka.com/buyonline/queen-of-my-world-gift-set/kid/combockfl22
+          - img "Queen Of My World Gift Set at Kapruka Online" [ref=e528]
+          - generic [ref=e529]:
+            - paragraph
+            - generic [ref=e530]:
+              - generic [ref=e531]: Queen Of My World Gift Set
+              - strong [ref=e532]:
+                - generic [ref=e533]: US$ 45.80
+                - generic [ref=e534]: (₹ 4337)
+            - paragraph
+        - link "Hp Fb3093 Ryzen 7 7445hs 16gb 512gb Nvme With 6gb Rtx 4050 Vga at Kapruka Online Hp Fb3093 Ryzen 7 7445hs 16g.. US$ 1348.15 (₹ 127669)" [ref=e536] [cursor=pointer]:
+          - /url: https://www.kapruka.com/buyonline/hp-fb3093-ryzen-7-7445hs-16gb-/kid/ef_pc_elec0v701pod00504
+          - img "Hp Fb3093 Ryzen 7 7445hs 16gb 512gb Nvme With 6gb Rtx 4050 Vga at Kapruka Online" [ref=e537]
+          - generic [ref=e538]:
+            - paragraph
+            - generic [ref=e539]:
+              - generic [ref=e540]: Hp Fb3093 Ryzen 7 7445hs 16g..
+              - strong [ref=e541]:
+                - generic [ref=e542]: US$ 1348.15
+                - generic [ref=e543]: (₹ 127669)
+            - paragraph
+        - link "Cuddly Charm Brown Teddy In Pretty Frock - 8 Inch at Kapruka Online Cuddly Charm Brown Teddy In .. US$ 10.69 (₹ 1012)" [ref=e545] [cursor=pointer]:
+          - /url: https://www.kapruka.com/buyonline/cuddly-charm-brown-teddy-in-pr/kid/softtoy001200
+          - img "Cuddly Charm Brown Teddy In Pretty Frock - 8 Inch at Kapruka Online" [ref=e546]
+          - generic [ref=e547]:
+            - paragraph
+            - generic [ref=e548]:
+              - generic [ref=e549]: Cuddly Charm Brown Teddy In ..
+              - strong [ref=e550]:
+                - generic [ref=e551]: US$ 10.69
+                - generic [ref=e552]: (₹ 1012)
+            - paragraph
+        - link "Ensure Life Vanilla Nutritional Supplement 400g at Kapruka Online Ensure Life Vanilla Nutritio.. US$ 21.35 (₹ 2021)" [ref=e554] [cursor=pointer]:
+          - /url: https://www.kapruka.com/buyonline/ensure-life-vanilla-nutritiona/kid/ef_pc_groc0v3721p00001
+          - img "Ensure Life Vanilla Nutritional Supplement 400g at Kapruka Online" [ref=e555]
+          - generic [ref=e556]:
+            - paragraph
+            - generic [ref=e557]:
+              - generic [ref=e558]: Ensure Life Vanilla Nutritio..
+              - strong [ref=e559]:
+                - generic [ref=e560]: US$ 21.35
+                - generic [ref=e561]: (₹ 2021)
+            - paragraph
+        - link "Grace Luxe Ladies Handbag at Kapruka Online Grace Luxe Ladies Handbag US$ 22.78 (₹ 2157) SOLD OUT" [ref=e563] [cursor=pointer]:
+          - /url: javascript:void(0);
+          - img "Grace Luxe Ladies Handbag at Kapruka Online" [ref=e564]
+          - generic [ref=e565]:
+            - paragraph
+            - generic [ref=e566]:
+              - generic [ref=e567]: Grace Luxe Ladies Handbag
+              - strong [ref=e568]:
+                - generic [ref=e569]: US$ 22.78
+                - generic [ref=e570]: (₹ 2157)
+              - generic [ref=e571]: SOLD OUT
+            - paragraph
+        - link "Aussie Supps Fish Oil 1000mg 30 capsules supports heart health at Kapruka Online Aussie Supps Fish Oil 1000mg.. US$ 13.53 (₹ 1281)" [ref=e573] [cursor=pointer]:
+          - /url: https://www.kapruka.com/buyonline/aussie-supps-fish-oil-1000mg-3/kid/pharmacy00653
+          - img "Aussie Supps Fish Oil 1000mg 30 capsules supports heart health at Kapruka Online" [ref=e574]
+          - generic [ref=e575]:
+            - paragraph
+            - generic [ref=e576]:
+              - generic [ref=e577]: Aussie Supps Fish Oil 1000mg..
+              - strong [ref=e578]:
+                - generic [ref=e579]: US$ 13.53
+                - generic [ref=e580]: (₹ 1281)
+            - paragraph
+        - link "Queen Of My World Gift Set at Kapruka Online Queen Of My World Gift Set US$ 45.80 (₹ 4337)" [ref=e582] [cursor=pointer]:
+          - /url: https://www.kapruka.com/buyonline/queen-of-my-world-gift-set/kid/combockfl22
+          - img "Queen Of My World Gift Set at Kapruka Online" [ref=e583]
+          - generic [ref=e584]:
+            - paragraph
+            - generic [ref=e585]:
+              - generic [ref=e586]: Queen Of My World Gift Set
+              - strong [ref=e587]:
+                - generic [ref=e588]: US$ 45.80
+                - generic [ref=e589]: (₹ 4337)
+            - paragraph
+        - link "Hp Fb3093 Ryzen 7 7445hs 16gb 512gb Nvme With 6gb Rtx 4050 Vga at Kapruka Online Hp Fb3093 Ryzen 7 7445hs 16g.. US$ 1348.15 (₹ 127669)" [ref=e591] [cursor=pointer]:
+          - /url: https://www.kapruka.com/buyonline/hp-fb3093-ryzen-7-7445hs-16gb-/kid/ef_pc_elec0v701pod00504
+          - img "Hp Fb3093 Ryzen 7 7445hs 16gb 512gb Nvme With 6gb Rtx 4050 Vga at Kapruka Online" [ref=e592]
+          - generic [ref=e593]:
+            - paragraph
+            - generic [ref=e594]:
+              - generic [ref=e595]: Hp Fb3093 Ryzen 7 7445hs 16g..
+              - strong [ref=e596]:
+                - generic [ref=e597]: US$ 1348.15
+                - generic [ref=e598]: (₹ 127669)
+            - paragraph
+        - link "Cuddly Charm Brown Teddy In Pretty Frock - 8 Inch at Kapruka Online Cuddly Charm Brown Teddy In .. US$ 10.69 (₹ 1012)" [ref=e600] [cursor=pointer]:
+          - /url: https://www.kapruka.com/buyonline/cuddly-charm-brown-teddy-in-pr/kid/softtoy001200
+          - img "Cuddly Charm Brown Teddy In Pretty Frock - 8 Inch at Kapruka Online" [ref=e601]
+          - generic [ref=e602]:
+            - paragraph
+            - generic [ref=e603]:
+              - generic [ref=e604]: Cuddly Charm Brown Teddy In ..
+              - strong [ref=e605]:
+                - generic [ref=e606]: US$ 10.69
+                - generic [ref=e607]: (₹ 1012)
+            - paragraph
+        - link "Ensure Life Vanilla Nutritional Supplement 400g at Kapruka Online Ensure Life Vanilla Nutritio.. US$ 21.35 (₹ 2021)" [ref=e609] [cursor=pointer]:
+          - /url: https://www.kapruka.com/buyonline/ensure-life-vanilla-nutritiona/kid/ef_pc_groc0v3721p00001
+          - img "Ensure Life Vanilla Nutritional Supplement 400g at Kapruka Online" [ref=e610]
+          - generic [ref=e611]:
+            - paragraph
+            - generic [ref=e612]:
+              - generic [ref=e613]: Ensure Life Vanilla Nutritio..
+              - strong [ref=e614]:
+                - generic [ref=e615]: US$ 21.35
+                - generic [ref=e616]: (₹ 2021)
+            - paragraph
+        - link "Grace Luxe Ladies Handbag at Kapruka Online Grace Luxe Ladies Handbag US$ 22.78 (₹ 2157) SOLD OUT" [ref=e618] [cursor=pointer]:
+          - /url: javascript:void(0);
+          - img "Grace Luxe Ladies Handbag at Kapruka Online" [ref=e619]
+          - generic [ref=e620]:
+            - paragraph
+            - generic [ref=e621]:
+              - generic [ref=e622]: Grace Luxe Ladies Handbag
+              - strong [ref=e623]:
+                - generic [ref=e624]: US$ 22.78
+                - generic [ref=e625]: (₹ 2157)
+              - generic [ref=e626]: SOLD OUT
+            - paragraph
+        - link "Aussie Supps Fish Oil 1000mg 30 capsules supports heart health at Kapruka Online Aussie Supps Fish Oil 1000mg.. US$ 13.53 (₹ 1281)" [ref=e628] [cursor=pointer]:
+          - /url: https://www.kapruka.com/buyonline/aussie-supps-fish-oil-1000mg-3/kid/pharmacy00653
+          - img "Aussie Supps Fish Oil 1000mg 30 capsules supports heart health at Kapruka Online" [ref=e629]
+          - generic [ref=e630]:
+            - paragraph
+            - generic [ref=e631]:
+              - generic [ref=e632]: Aussie Supps Fish Oil 1000mg..
+              - strong [ref=e633]:
+                - generic [ref=e634]: US$ 13.53
+                - generic [ref=e635]: (₹ 1281)
+            - paragraph
+        - link "Queen Of My World Gift Set at Kapruka Online Queen Of My World Gift Set US$ 45.80 (₹ 4337)" [ref=e637] [cursor=pointer]:
+          - /url: https://www.kapruka.com/buyonline/queen-of-my-world-gift-set/kid/combockfl22
+          - img "Queen Of My World Gift Set at Kapruka Online" [ref=e638]
+          - generic [ref=e639]:
+            - paragraph
+            - generic [ref=e640]:
+              - generic [ref=e641]: Queen Of My World Gift Set
+              - strong [ref=e642]:
+                - generic [ref=e643]: US$ 45.80
+                - generic [ref=e644]: (₹ 4337)
+            - paragraph
+        - link "Hp Fb3093 Ryzen 7 7445hs 16gb 512gb Nvme With 6gb Rtx 4050 Vga at Kapruka Online Hp Fb3093 Ryzen 7 7445hs 16g.. US$ 1348.15 (₹ 127669)" [ref=e646] [cursor=pointer]:
+          - /url: https://www.kapruka.com/buyonline/hp-fb3093-ryzen-7-7445hs-16gb-/kid/ef_pc_elec0v701pod00504
+          - img "Hp Fb3093 Ryzen 7 7445hs 16gb 512gb Nvme With 6gb Rtx 4050 Vga at Kapruka Online" [ref=e647]
+          - generic [ref=e648]:
+            - paragraph
+            - generic [ref=e649]:
+              - generic [ref=e650]: Hp Fb3093 Ryzen 7 7445hs 16g..
+              - strong [ref=e651]:
+                - generic [ref=e652]: US$ 1348.15
+                - generic [ref=e653]: (₹ 127669)
+            - paragraph
+      - generic:
+        - button "Previous" [ref=e654] [cursor=pointer]: ‹
+        - button "Next" [ref=e655] [cursor=pointer]: ›
+      - generic [ref=e656]:
+        - button
+        - button
+  - heading "Also At Kapruka" [level=2] [ref=e658]
+  - generic [ref=e659]:
+    - link "Reload Mobile Phones" [ref=e660] [cursor=pointer]:
+      - /url: https://www.kapruka.com/Sri_Lanka/mobile_reloads/index.jsp
+      - img [ref=e661]
+      - generic [ref=e663]: Reload Mobile Phones
+    - link "International Gift Delivery" [ref=e664] [cursor=pointer]:
+      - /url: https://www.kapruka.com/international_gifts/index.jsp
+      - img [ref=e665]
+      - generic [ref=e667]: International Gift Delivery
+    - link "Real Estate For Sale in Sri Lanka" [ref=e668] [cursor=pointer]:
+      - /url: https://www.kapruka.com/realestate
+      - img [ref=e669]
+      - generic [ref=e686]: Real Estate For Sale in Sri Lanka
+    - link "Horoscope Reading Horoscope Reading" [ref=e687] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/services/price/horoscope_reading
+      - img "Horoscope Reading" [ref=e688]
+      - generic [ref=e689]: Horoscope Reading
+    - link "Astrology Service" [ref=e690] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/services/price/horoscope_reading
+      - img [ref=e691]
+      - generic [ref=e700]: Astrology Service
+    - link "Made in Sri Lanka" [ref=e701] [cursor=pointer]:
+      - /url: https://www.kapruka.com/online/exports
+      - img [ref=e702]
+      - generic [ref=e707]: Made in Sri Lanka
+  - link "SELL WITH KAPRUKA AND GROW YOUR BUSINESS partnercentral.kapruka.com Kapruka Partner Central" [ref=e708] [cursor=pointer]:
+    - /url: https://partnercentral.kapruka.com/#/auth/login
+    - generic [ref=e710]:
+      - generic [ref=e711]:
+        - heading "SELL WITH KAPRUKA AND GROW YOUR BUSINESS" [level=2] [ref=e712]
+        - generic [ref=e713]: partnercentral.kapruka.com
+      - img "Kapruka Partner Central" [ref=e715]
+  - generic [ref=e717]:
+    - generic [ref=e718]:
+      - img [ref=e719]
+      - generic [ref=e724]:
+        - text: Faster Delivery
+        - generic [ref=e725]: Delivery in 24/H
+    - generic [ref=e726]:
+      - img [ref=e727]
+      - generic [ref=e730]:
+        - text: 24 Hours Return
+        - generic [ref=e731]: 100% money-back gurantee
+    - generic [ref=e732]:
+      - img [ref=e733]
+      - img [ref=e734]
+      - generic [ref=e736]:
+        - text: Secure Payment
+        - generic [ref=e737]: Your Money is Safe
+    - link "Support 24/7 Live contact/ Message" [ref=e738] [cursor=pointer]:
+      - /url: https://www.kapruka.com/contactUs/officeLocations.jsp
+      - img [ref=e739]
+      - generic [ref=e741]:
+        - text: Support 24/7
+        - generic [ref=e742]: Live contact/ Message
+  - contentinfo [ref=e744]:
+    - generic [ref=e745]:
+      - heading "JOIN THE HAPPY CROWD" [level=4] [ref=e746]
+      - paragraph [ref=e747]: Get New Arrivals and Exclusive Offers in Your Inbox
+      - link "Sri Lankan Largest online Shopping Join Our Whatsapp Channel" [ref=e749] [cursor=pointer]:
+        - /url: https://whatsapp.com/channel/0029VaqxVS23AzNPsQusIh3e
+        - img "Sri Lankan Largest online Shopping" [ref=e751]
+        - generic [ref=e752]: Join Our Whatsapp Channel
+    - generic [ref=e753]:
+      - generic [ref=e755]:
+        - generic [ref=e756]: "SL:"
+        - generic [ref=e757]:
+          - text: 147 Old Kottawa Road, Nugegoda 10250, Sri Lanka
+          - paragraph [ref=e758]:
+            - text: "24/7 Hotline:"
+            - link "+94117551111" [ref=e759] [cursor=pointer]:
+              - /url: tel:+94117551111
+          - text: "email:"
+          - link "colombo.office@kapruka.com" [ref=e760] [cursor=pointer]:
+            - /url: https://www.kapruka.com/contactUs/onlineHelpForm.jsp
+          - link "whatsapp support in kapruka" [ref=e761] [cursor=pointer]:
+            - /url: https://wa.me/message/GEDHPZLFW2E7O1
+            - img "whatsapp support in kapruka" [ref=e762]
+          - text: "Whatsapp Support:"
+          - link "+94707117777" [ref=e763] [cursor=pointer]:
+            - /url: https://wa.me/message/GEDHPZLFW2E7O1
+      - generic [ref=e765]:
+        - generic [ref=e766]: "USA:"
+        - generic [ref=e767]:
+          - text: 4364 Cranwood Parkway,
+          - text: Warrensville Heights,OH,44128,
+          - text: USA
+          - text: "(Phone: +1-888-502-5244)"
+          - text: "email:"
+          - link "lexingtonky.office@kapruka.com" [ref=e768] [cursor=pointer]:
+            - /url: https://www.kapruka.com/contactUs/onlineHelpForm.jsp
+      - generic [ref=e770]:
+        - generic [ref=e771]: "UK:"
+        - generic [ref=e772]:
+          - text: 145-157 St John Street, London
+          - text: EC1V 4PY,
+          - text: United Kingdom
+          - text: "(Phone: +44-203-769-0961)"
+          - text: "email:"
+          - link "london.office@kapruka.com" [ref=e773] [cursor=pointer]:
+            - /url: https://www.kapruka.com/contactUs/onlineHelpForm.jsp
+      - generic [ref=e775]:
+        - generic [ref=e776]: "AUS:"
+        - generic [ref=e777]:
+          - text: 440 Collins St
+          - text: Level 9,#331,
+          - text: Melbourne VIC 3000
+          - text: "(Phone: +61-391-112-322)"
+          - text: "email:"
+          - link "melbourne.office@kapruka.com" [ref=e778] [cursor=pointer]:
+            - /url: https://www.kapruka.com/contactUs/onlineHelpForm.jsp
+    - generic [ref=e779]:
+      - link "Sell With Kapruka" [ref=e781] [cursor=pointer]:
+        - /url: "https://partnercentral.kapruka.com/ "
+        - img "Sell With Kapruka" [ref=e782]
+      - generic [ref=e783]:
+        - text: Download
+        - link "Kapruka App" [ref=e784] [cursor=pointer]:
+          - /url: https://www.kapruka.com/contactUs/downloadapp.jsp
+      - link "kapruka online app" [ref=e785] [cursor=pointer]:
+        - /url: https://apps.apple.com/us/app/kapruka/id1367410203
+        - img "kapruka online app" [ref=e786]
+      - link "kapruka online app" [ref=e787] [cursor=pointer]:
+        - /url: https://play.google.com/store/apps/details?id=com.kapruka.kaprukamobile
+        - img "kapruka online app" [ref=e788]
+    - paragraph [ref=e789]:
+      - link "Read About Kapruka" [ref=e790] [cursor=pointer]:
+        - /url: https://www.kapruka.com/contactUs/about.html
+      - text: "|"
+      - link "Reviews" [ref=e791] [cursor=pointer]:
+        - /url: https://www.kapruka.com/contactUs/kapruka_reviews.jsp
+      - text: "|"
+      - link "Refund & Returns" [ref=e792] [cursor=pointer]:
+        - /url: https://www.kapruka.com/shop/returns-refunds-and-other-policies-of-kapruka
+      - text: "|"
+      - link "Careers" [ref=e793] [cursor=pointer]:
+        - /url: https://blog.kapruka.com/kapruka_careers
+      - text: "|"
+      - link "FAQs" [ref=e794] [cursor=pointer]:
+        - /url: https://www.kapruka.com/shop/faq
+    - paragraph [ref=e795]:
+      - link "Lanka Copyright":
+        - /url: https://kapruka.com/sitemap.xml
+      - text: Kapruka.com Online Shopping for
+      - link "Sri Lankans" [ref=e796] [cursor=pointer]:
+        - /url: https://en.wikipedia.org/wiki/Sri_Lanka
+      - text: around the world.
+    - generic [ref=e798]:
+      - link "Facebook" [ref=e799] [cursor=pointer]:
+        - /url: https://www.facebook.com/kaprukafans
+        - img "Facebook" [ref=e800]
+      - link "Twitter" [ref=e801] [cursor=pointer]:
+        - /url: https://twitter.com/kapruka
+        - img "Twitter" [ref=e802]
+      - link "Instagram" [ref=e803] [cursor=pointer]:
+        - /url: https://www.instagram.com/kapruka
+        - img "Instagram" [ref=e804]
+      - link "LinkedIn" [ref=e805] [cursor=pointer]:
+        - /url: https://www.linkedin.com/company/kapruka-com
+        - img "LinkedIn" [ref=e806]
+      - link "YouTube" [ref=e807] [cursor=pointer]:
+        - /url: https://www.youtube.com/@kaprukatube
+        - img "YouTube" [ref=e808]
+```
