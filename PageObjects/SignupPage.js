@@ -18,14 +18,14 @@ class SignupPage {
 
     }
 
-    async goTokap()
-    {
-        await this.page.goto("https://www.kapruka.com/?srsltid=AfmBOorOwDUMEemcwvYsu4uhuIC1C_sPjsHXMWLeCwlf2YTcM6_-Yct2");
-        await this.page.waitForTimeout(50000);
-    }   
+    
+    async goToKap(url = 'https://www.kapruka.com/?srsltid=AfmBOorOwDUMEemcwvYsu4uhuIC1C_sPjsHXMWLeCwlf2YTcM6_-Yct2') {
+        await this.page.goto(url, { timeout: 50000 });
+    }
+     
 
     async validSignup(firstname,lastname,email,password,confirmpassword)
-{
+    {
     await this.firstname.fill(firstname);
     await this.lastname.fill(lastname);
     await this.email.fill(email);
@@ -34,7 +34,7 @@ class SignupPage {
     await this.signupbutton.click();
     await this.page.waitForLoadState('networkidle');
 
-}
+    }
 }
 
 module.exports = SignupPage;
